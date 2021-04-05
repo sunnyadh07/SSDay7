@@ -3,20 +3,15 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        //String[] prettyLiarsCast = {"Ronald", "Sophie", "Delilah"};
-        TvEpisodes show = new TvEpisodes("Pretty liars", 23, "James Bond", "Sammy", "Diana");
+        ArrayList<String> cast = new ArrayList<>();
+        cast.add("Elena");
+        cast.add("Damon");
+        cast.add("Stefan");
 
-        System.out.println(Arrays.toString(show.getCast()));
+        TvEpisodes vampireDiaries = new TvEpisodes("Stefans episode", 34, "Sam", cast);
 
-        ArrayList<String> newcast = new ArrayList<>();
-        newcast.add("Elena");
-        newcast.add("Damon");
-        newcast.add("Stefan");
-
-        for (String cast : newcast) {
-            System.out.println(cast);
+        System.out.println(vampireDiaries);
 
         }
-    }
 }
 

@@ -4,9 +4,9 @@ public class TvEpisodes {
     private String episodeTitle;
     private int episodeLength;
     private String director;
-    private  String[] cast;
+    private ArrayList<String> cast;
 
-    public TvEpisodes(String episodeTitle, int episodeLength, String director, String[] cast) {
+    public TvEpisodes(String episodeTitle, int episodeLength, String director, ArrayList<String> cast) {
         this.episodeTitle = episodeTitle;
         this.episodeLength = episodeLength;
         this.director = director;
@@ -37,12 +37,22 @@ public class TvEpisodes {
         this.director = director;
     }
 
-    public String[] getCast() {
+    public ArrayList<String> getCast() {
         return cast;
     }
 
-    public void setCast(String[] cast) {
+    public void setCast(ArrayList<String> cast) {
         this.cast = cast;
+    }
+
+    @Override
+    public String toString() {
+        return "TvEpisodes{" +
+                "episodeTitle='" + episodeTitle + '\'' +
+                ", episodeLength=" + episodeLength +
+                ", director='" + director + '\'' +
+                ", cast=" + cast +
+                '}';
     }
 }
 
